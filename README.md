@@ -27,9 +27,6 @@ The application follows a modular and scalable architecture designed for high av
 │   └── logger_config.py   # Custom logging implementation following %-5p standardized patterns
 ├── tests/
 │   └── test_main.py       # Automated Unit Tests for validation logic and endpoint health
-├── data/                  # Persistent storage directory for SQLite database files
-├── data_combine/
-│    └── test_main.py       # Persistent combine json_data for postman
 ├── nginx.conf             # Load balancing configuration for distributing traffic to API replicas
 ├── docker-compose.yml     # Orchestration for NGINX, API replicas (x2), Testing, and Grafana
 ├── Dockerfile             # Multi-stage build for the FastAPI application
