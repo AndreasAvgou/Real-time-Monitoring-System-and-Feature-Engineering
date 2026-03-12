@@ -1,0 +1,54 @@
+services:
+    # --- 1. API Service (FastAPI) ---
+    api:
+        build: .
+        volumes:
+            - .:/app
+            - ./data:/app/data
+        deploy:
+            replicas: 2
+        restart: always
+
+    # --- 2. Unit Testing Service (ΠΡΟΣΘΗΚΗ) ---
+    # Αυτό το service χρησιμοποιεί το ίδιο image αλλά τρέχει το pytest
+    tests:
+        build: .
+        volumes:
+            - .:/app
+            - ./data:/app/data
+        environment:
+            - PYTHONPATH=.
+            - DATABASE_URL=sqlite:///./data/test_db.db
+        # Αντί για τον server, τρέχει μόνο τα tests και τερματίζει
+        command: pytest tests/test_main.py -v
+        depends_on:
+            - api
+
+    # --- 3. Reverse Proxy (NGINX) ---
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        ports:
+            - "8080:80"
+        depends_on:
+            - api
+        restart: always
+
+    # --- 4. Monitoring (Grafana) ---
+    grafana:
+        image: grafana/grafana:latest
+        container_name: grafana-container
+        ports:
+            - "3000:3000"
+        environment:
+            - GF_INSTALL_PLUGINS=frser-sqlite-datasource
+        volumes:
+            - grafana_storage:/var/lib/grafana
+            - ./data:/app/data:ro
+        depends_on:
+            - api
+        restart: always
+
+volumes:
+    grafana_storage:
