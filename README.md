@@ -1,9 +1,9 @@
 # Real time Monitoring System & Feature Engineering
 
-## 📌 Overview
+## Overview
 This project provides a robust and scalable API developed using the **FastAPI** framework to manage a complex feature engineering process. The service is designed for high performance and includes comprehensive monitoring and reporting capabilities.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Language:** Python 3.11+
 * **API Framework:** FastAPI
