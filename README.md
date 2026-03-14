@@ -13,7 +13,7 @@ This project provides a robust and scalable API developed using the **FastAPI** 
 * **Monitoring:** Grafana for real-time visualization of metrics
 * **Testing:** Postman for performance baseline and stress testing
 
-## 📁 Project Structure
+## Project Structure
 
 The application follows a modular and scalable architecture designed for high availability and robust data processing:
 
@@ -33,7 +33,7 @@ The application follows a modular and scalable architecture designed for high av
 └── README.md              # Technical documentation and project overview
 ```
 
-## 🔍 Key Features
+## Key Features
 
 ### 1. Advanced Data Validation
 
