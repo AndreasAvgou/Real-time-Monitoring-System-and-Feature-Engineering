@@ -100,7 +100,7 @@ Scalability and performance were verified using **Postman** to simulate real-tim
 | Avg. RAM Usage | 9.05% | Predictable and stable memory footprint. |
 | Zero Value Count | 0 | Data quality check: No empty/zero features detected. |
 
-## 🚀 How to Run
+## How to Run
 
 **1. Infrastructure Setup**
 
@@ -135,7 +135,7 @@ Follow these steps to simulate real-time execution of 10,000 or 100,000 requests
 5. **Run:** Execute the test and monitor the Validation Summary and Latency in real-time via the Grafana Dashboard.
 
 
-## 📜 Logging Specifications
+## Logging Specifications
 
 The system implements a standardized logging pattern: ```%-5p,%d{yyyy-MM-dd HH:mm:ss,SSS} (%t) [%c] %m [%M:%L]%n```.
 
