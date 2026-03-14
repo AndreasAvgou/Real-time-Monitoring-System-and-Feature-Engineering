@@ -70,7 +70,6 @@ The service captures and stores key performance indicators for every single requ
 
 Scalability and performance were verified using **Postman** to simulate real-time execution scenarios:
 * **10,000 requests**: Executed to provide an initial view of service performance.
-<img width="865" height="389" alt="image" src="https://github.com/user-attachments/assets/1fcfe32e-eb04-4c41-9178-389bbdb9e46b" />
 
 | Metric | Value | Reference / Observation |
 | ---------- | ---------- | ---------- |
@@ -85,8 +84,6 @@ Scalability and performance were verified using **Postman** to simulate real-tim
 | Features with Zero Values | 0 | No zero-value features in the current test run. |
 
 * **100,000 requests**: Executed as a stress test to ensure system stability and scalability under heavy load.
-
-<img width="746" height="339" alt="image" src="https://github.com/user-attachments/assets/dac0f760-7cf1-4d83-97f4-760c1ee7f5eb" />
 
 | Metric | Value | Reference / Observation |
 | ---------- | ---------- | ---------- |
