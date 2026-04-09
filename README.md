@@ -58,7 +58,7 @@ The service captures and stores key performance indicators for every single requ
 * **Worker Management**: Gunicorn utilizes Uvicorn workers to maximize asynchronous throughput.
 * **Deployment**: The entire application is containerized using Docker for consistent environment management.
 
-## 🚦 API Endpoints
+## API Endpoints
 
 * **`GET /health`**: Returns `{"status": "UP"}` to verify the API is up and running.
 * **`POST /feature-engineering`**: Validates input data, stores results in the DB, and returns engineered features in JSON format.
@@ -66,7 +66,7 @@ The service captures and stores key performance indicators for every single requ
 * **`GET /customer/{cid}/history/features`**: Retrieves historic feature engineering outputs for a specific customer.
 * **`DELETE /customer/{cid}`**: Purges customer records from both transactional and feature engineering databases.
 
-## 📈 Performance Testing
+## Performance Testing
 
 Scalability and performance were verified using **Postman** to simulate real-time execution scenarios:
 * **10,000 requests**: Executed to provide an initial view of service performance.
